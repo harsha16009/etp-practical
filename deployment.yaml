@@ -1,0 +1,21 @@
+apiversion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-project
+labels:
+  app: microservice-project
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: microservice-project
+  template:
+    metadata:
+      labels:
+        app: microservice-project
+    spec:
+      containers:
+      - name: microservice-project
+        image: 
+        ports: int377
+        - containerPort: 3000
